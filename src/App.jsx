@@ -3,11 +3,14 @@ import axios from 'axios';
 
 function App() {
 
-  useEffect(async () => {
-    const response = await axios.get('http://127.0.0.1:8000/api/music/');
-    console.log(response);
-
+  useEffect(() => {
+    getAllSongs();
   }, []);
+
+  async function getAllSongs(){
+    const response = await axios.get('http://127.0.0.1:8000/api/music/');
+    console.log(response.data);
+  }
 
 
   return (
