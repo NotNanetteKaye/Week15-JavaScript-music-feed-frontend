@@ -3,7 +3,7 @@ import React from 'react';
 const SongTable = (props) => {
     return (
         <div className='container'>
-            <table>
+            <table className="table table-sm">
                 <thead>
                     <tr>
                         <th>Title</th>

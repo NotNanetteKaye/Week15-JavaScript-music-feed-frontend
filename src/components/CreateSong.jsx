@@ -77,12 +77,90 @@ const CreateSong = () => {
 
 export default CreateSong;
 
-// async function createSong(newSong) {
-//   let response = await axios.post("http://127.0.0.1:8000/api/music/", newSong);
-//   if (response.status===204) {
-//     console.log('successfully created a new song')
-//   }
-//   if (response.status===201){
-//     await getAllSongs();
-//   }
-// }
+// const CreateSong = (props) => {
+//   const [addSongData, setAddSongData] = useState({
+//     title:'',
+//     artist: '',
+//     album:'',
+//     releaseDate: '2022-10-10',
+//     genre: '',
+//     likes: 1,
+//   })
+
+//   const handleFormChange = (event) => {
+//     event.preventDefault();
+
+//     const fieldName = event.target.getAttribute('name');
+//     const fieldValue = event.target.value;
+
+//     const newSongData = {...addSongData};
+//     newSongData[fieldName] = fieldValue;
+
+//     setAddSongData(newSongData)
+//     };
+
+//     const handleFormSubmit = async (event) => {
+//       event.preventDefault();
+//       let newSong = {
+//         id: nanoid(),
+//         title: addSongData.title,
+//         artist: addSongData.artist,
+//         album: addSongData.album,
+//         release_date: addSongData.releaseDate,
+//         genre: addSongData.genre,
+//         likes: addSongData.likes,
+//       };
+//       try {
+//         const response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
+//         console.log(response.data);
+//       } catch (error) {
+//         console.log(error.response);
+//       }
+//     }
+
+//   return (
+//     <form onChange={handleFormSubmit} className="form-grid">
+//       <div className="form-group row">
+//         <label>Title</label>
+//         <input
+//           type="string"
+//           name='title'
+//           onChange={handleFormChange}
+//         />
+//         <label>Artists</label>
+//         <input
+//           type="string"
+//           name='artist'
+//           onChange={handleFormChange}
+//         />
+//         <label>Album</label>
+//         <input
+//           type="string"
+//           name="album"
+//           onChange={handleFormChange}
+//         />
+//         <label>Release Date</label>
+//         <input
+//           type="date"
+//           name="date"
+//           onChange={handleFormChange}
+//         />
+//         <label>Genre</label>
+//         <input
+//           type="string"
+//           name="genre"
+//           onChange={handleFormChange}
+//         />
+//         <label>Likes</label>
+//         <input
+//           type="number"
+//           step="1"
+//           name="likes"
+//           onChange={handleFormChange}
+//         />
+//       </div>
+//       <button type='submit'>Create New Song</button>
+//     </form>
+//   );
+// };
+

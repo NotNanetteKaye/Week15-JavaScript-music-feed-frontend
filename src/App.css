@@ -1,0 +1,21 @@
+.container-fluid {
+    background-color: rgb(182, 217, 208)
+}
+
+.border-box {
+    color: pink;
+}
+
+.nkd {
+    margin-bottom: 0rem;
+    font-weight: 400;
+    line-height: 1;
+    font-size: .75cm;
+}
+
+.delete {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
