@@ -19,20 +19,20 @@ function App() {
 
   return (
     <div className='container-fluid'>
+      <br></br>
+      <h1 className='music-feed'>Nanette's Music Feed!</h1>
+      <h6 className='quote'><em>"Because music has no language barrier. Music needs no translation."</em></h6>
       <div className='row'>
-        <h1 className='display-1'>Music Feed</h1>
-        <div style={{padding:'1em'}}>
-          <h1 className='nkd'>Nanette</h1>
-          <h1 className='nkd'>Kaye</h1>
-          <h1 className='nkd'>Dolera</h1>
-        </div>
-      </div>
-      <h3 className='font-italic'>Because music has no language barrier. Music needs no translation.</h3>
-      <div className='col-md-2'></div>
-      <div className='col-md-7'>
-        <CreateSong songData={songs}/>
-      <div className='col-md-2'></div>
-      <SearchBarTable songPosts={songs}/>
+          <div className='col-md-4'>
+            <div className='border-box'>
+                <CreateSong songData={songs}/>
+            </div>
+          </div>
+          <div className='col-md-8'>
+            <div className='border-box'>
+              <SearchBarTable songPosts={songs}/>
+            </div>
+          </div>
       </div>
     </div>
   );

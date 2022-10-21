@@ -30,48 +30,53 @@ const CreateSong = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-grid">
-      <div className="form-group row">
-        <label>Title</label>
-        <input
-          type="string"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
-        <label>Artists</label>
-        <input
-          type="string"
-          value={artist}
-          onChange={(event) => setArtist(event.target.value)}
-        />
-        <label>Album</label>
-        <input
-          type="string"
-          value={album}
-          onChange={(event) => setAlbum(event.target.value)}
-        />
-        <label>Release Date</label>
-        <input
-          type="date"
-          value={releaseDate}
-          onChange={(event) => setReleaseDate(event.target.value)}
-        />
-        <label>Genre</label>
-        <input
-          type="string"
-          value={genre}
-          onChange={(event) => setGenre(event.target.value)}
-        />
-        <label>Likes</label>
-        <input
-          type="number"
-          step="1"
-          value={likes}
-          onChange={(event) => setLikes(event.target.value)}
-        />
+    <div>
+      <h5><em>Add a new song to the table:</em></h5>
+      <br></br>
+      <form onSubmit={handleSubmit} className="form-grid">
+        <div className="form-group row">
+          <label>Title</label>
+          <input
+            type="string"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
+          <label>Artists</label>
+          <input
+            type="string"
+            value={artist}
+            onChange={(event) => setArtist(event.target.value)}
+          />
+          <label>Album</label>
+          <input
+            type="string"
+            value={album}
+            onChange={(event) => setAlbum(event.target.value)}
+          />
+          <label>Release Date</label>
+          <input
+            type="date"
+            value={releaseDate}
+            onChange={(event) => setReleaseDate(event.target.value)}
+          />
+          <label>Genre</label>
+          <input
+            type="string"
+            value={genre}
+            onChange={(event) => setGenre(event.target.value)}
+          />
+          <label>Likes</label>
+          <input
+            type="number"
+            step="1"
+            value={likes}
+            onChange={(event) => setLikes(event.target.value)}
+          />
+        </div>
+        <br></br>
+        <button>Create New Song</button>
+      </form>
       </div>
-      <button>Create New Song</button>
-    </form>
   );
 };
 

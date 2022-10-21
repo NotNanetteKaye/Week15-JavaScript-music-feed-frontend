@@ -5,6 +5,8 @@ const SearchBarTable = (props) => {
 
   return (
     <div>
+        <h5><em>Search through my songs here:</em></h5>
+      <br></br>
       <form>
         <input
           type="text"
@@ -13,7 +15,7 @@ const SearchBarTable = (props) => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
-      <table>
+      <table className='table table-hover'>
         <thead>
             <tr>
                 <th>Title</th>
