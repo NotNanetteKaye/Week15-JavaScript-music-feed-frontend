@@ -15,9 +15,9 @@ const SongTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.songPosts.map((song) => {
+                    {props.songPosts.map((song, index) => {
                         return (
-                            <tr>
+                            <tr key={index}>
                                 <td>{song.title}</td>
                                 <td>{song.artist}</td>
                                 <td>{song.album}</td>

@@ -1,6 +1,7 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 const url = "http://127.0.0.1:8000/api/music/";
+
 
 const CreateSong = () => {
   const [title, setTitle] = useState("");
@@ -75,3 +76,13 @@ const CreateSong = () => {
 };
 
 export default CreateSong;
+
+// async function createSong(newSong) {
+//   let response = await axios.post("http://127.0.0.1:8000/api/music/", newSong);
+//   if (response.status===204) {
+//     console.log('successfully created a new song')
+//   }
+//   if (response.status===201){
+//     await getAllSongs();
+//   }
+// }
