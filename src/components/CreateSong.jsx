@@ -75,6 +75,9 @@ const CreateSong = () => {
         </div>
         <br></br>
         <button>Create New Song</button>
+        <br></br>
+        <br></br>
+        <h6><em>Refresh page to see new song!</em></h6>
       </form>
       </div>
   );
