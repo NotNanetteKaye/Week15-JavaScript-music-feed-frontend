@@ -25,7 +25,7 @@ function App() {
       <div className='row'>
           <div className='col-md-4'>
             <div className='border-box'>
-                <CreateSong songData={songs}/>
+                <CreateSong songData={songs} getAllSongs={getAllSongs}/>
             </div>
           </div>
           <div className='col-md-8'>

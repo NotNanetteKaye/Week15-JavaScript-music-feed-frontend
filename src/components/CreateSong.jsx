@@ -3,7 +3,7 @@ import axios from 'axios';
 const url = "http://127.0.0.1:8000/api/music/";
 
 
-const CreateSong = () => {
+const CreateSong = ({getAllSongs}) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
@@ -28,6 +28,7 @@ const CreateSong = () => {
       console.log(error.response);
     }
   };
+  getAllSongs()
 
   return (
     <div>
@@ -77,7 +78,6 @@ const CreateSong = () => {
         <button>Create New Song</button>
         <br></br>
         <br></br>
-        <h6><em>Refresh page to see new song!</em></h6>
       </form>
       </div>
   );
